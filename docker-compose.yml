@@ -1,0 +1,19 @@
+version: "3"
+services:
+  api:
+    image: get-client-ip
+    build: .
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+
+  web-cli:
+    image: get-client-ip
+    networks:
+      - backend
+    command: sh
+
+networks:
+  backend:
+    driver: bridge
