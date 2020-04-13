@@ -1,7 +1,7 @@
 version: "3"
 services:
   api:
-    image: get-client-ip
+    image: vinaykarode/get-client-ip:0.0.1
     build: .
     networks:
       - backend
@@ -9,7 +9,7 @@ services:
       - "3000:3000"
 
   web-cli:
-    image: get-client-ip
+    image: vinaykarode/get-client-ip:0.0.1
     networks:
       - backend
     command: sh
